@@ -1,0 +1,26 @@
+Source: yelp-xsl
+Section: gnome
+Priority: extra
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Martin Pitt <mpitt@debian.org>, Michael Biebl <biebl@debian.org>
+Build-Depends: debhelper (>= 8),
+               cdbs,
+               gnome-pkg-tools,
+               autotools-dev,
+               pkg-config,
+               libxml2-dev,
+               libxml2-utils,
+               libxslt1-dev,
+               xsltproc,
+               intltool,
+               itstool (>= 1.2.0)
+Standards-Version: 3.9.4
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/yelp-xsl
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/yelp-xsl
+
+Package: yelp-xsl
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: XSL stylesheets for the yelp help browser
+ Yelp-xsl contains XSL stylesheets that are used by the yelp help browser
+ to format Docbook and Mallard documents.
