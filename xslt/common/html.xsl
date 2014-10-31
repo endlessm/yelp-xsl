@@ -2100,8 +2100,10 @@ function yelp_init_video (element) {
 
   var video_el = video[0];
   var mediaChange = function () {
-    if (video_el.ended)
+    if (video_el.ended) {
       video_el.pause()
+      $('.ui-overlay-close').click();
+    }
     if (video_el.paused) {
       playControl.attr('value', playControl.attr('data-play-label'));
       paintPlayButton();
