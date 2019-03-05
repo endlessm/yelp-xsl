@@ -1,7 +1,8 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
-include /usr/share/cdbs/1/rules/utils.mk
-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+%:
+	dh $@
 
+# Note that the build doesn't automatically install the docs
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-doc
